@@ -1,0 +1,15 @@
+:root {
+  --colornotfound: gray;
+}
+
+.h_notfound {
+  font-size: 15vw;
+  text-align: center;
+  color: var(--colornotfound);
+}
+.p_notfound {
+  text-align: center;
+  font-size: 3vw;
+  color: var(--colornotfound);
+  margin-top: -20vh;
+}

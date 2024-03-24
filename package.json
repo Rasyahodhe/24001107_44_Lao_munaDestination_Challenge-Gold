@@ -1,6 +1,0 @@
-{
-  "dependencies": {
-    "express": "^4.18.3",
-    "express-ejs-layouts": "^2.5.1"
-  }
-}

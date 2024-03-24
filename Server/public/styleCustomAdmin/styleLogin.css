@@ -1,0 +1,14 @@
+.h_log {
+  text-align: center;
+  border: 1px solid black;
+}
+.con_custom {
+  width: 100%;
+  height: calc(100vh - 50px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.con_custom_item {
+  width: 40vw;
+}

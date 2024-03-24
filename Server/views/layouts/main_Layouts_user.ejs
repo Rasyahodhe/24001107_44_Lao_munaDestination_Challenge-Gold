@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="stylebootsrap/bootstrap.css" />
+    <link rel="stylesheet" href="styleCustom/styleAll.css" />
+
+    <title><%= title%></title>
+  </head>
+  <body>
+    <div class="splash">
+      <img src="" alt="" />
+    </div>
+    <div class="aftersplash">
+      <%- include("../components/users/nav.ejs") %>
+      <div class="container"><%- body %></div>
+    </div>
+  </body>
+  <script src="script/script.js"></script>
+  <script src="script/bootstrap.bundle.min.js"></script>
+</html>
