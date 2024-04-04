@@ -15,10 +15,6 @@ app.use("/", morgan("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-// Get The Router User
-const { routeruser } = require("./router/routerusers");
-app.use(routeruser);
-
 // Get The Router Admin
 const { routerAdmin } = require("./router/routeradmin");
 app.use(routerAdmin);

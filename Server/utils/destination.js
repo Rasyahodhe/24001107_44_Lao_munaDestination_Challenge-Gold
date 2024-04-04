@@ -19,4 +19,45 @@ const loadDestinations = () => {
   return destinations;
 };
 
-module.exports = { loadDestinations };
+// Proces Add data
+// Function Save Data to JSON
+const saveData = (destination) => {
+  fs.writeFileSync("data/destinations.json", JSON.stringify(destination));
+};
+// function for to Add Data
+const addData = (destination) => {
+  const destinations = loadDestinations();
+  destinations.push(destination);
+  saveData(destinations);
+};
+
+//function Update item
+const updateData = (destination) => {
+  const destinations = loadDestinations();
+  const finddestination = destinations.find((des) => {
+    destination.nameDes === destination;
+  });
+};
+
+// function Delete item
+const delData = (destination) => {
+  const destinations = loadDestinations();
+  const finddestination = destinations.find((des) => {
+    destination.nameDes === destination;
+  });
+  const index = destinations.indexOf(finddestination);
+
+};
+
+// function Seacrh item
+
+const finData = (destination) => {
+  const destinations = loadDestinations();
+  const finddestination = destinations.find((des) => {
+    des.nameDes === destination;
+  });
+
+  return finddestination;
+};
+
+module.exports = { loadDestinations, addData, finData };
