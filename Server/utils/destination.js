@@ -34,19 +34,16 @@ const addData = (destination) => {
 //function Update item
 const updateData = (destination) => {
   const destinations = loadDestinations();
-  const finddestination = destinations.find((des) => {
-    destination.nameDes === destination;
-  });
+  const indexdes = destinations.indexOf(destination);
+  destinations[indexdes] = destination;
+  saveData(destinations);
 };
 
 // function Delete item
-const delData = (destination) => {
+const delData = (id) => {
   const destinations = loadDestinations();
-  const finddestination = destinations.find((des) => {
-    destination.nameDes === destination;
-  });
-  const index = destinations.indexOf(finddestination);
-
+  destinations.splice(+id, 1);
+  saveData(destinations);
 };
 
 // function Seacrh item
@@ -56,8 +53,7 @@ const finData = (destination) => {
   const finddestination = destinations.find((des) => {
     des.nameDes === destination;
   });
-
   return finddestination;
 };
 
-module.exports = { loadDestinations, addData, finData };
+module.exports = { loadDestinations, addData, finData, delData, updateData };

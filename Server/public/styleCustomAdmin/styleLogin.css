@@ -1,14 +1,84 @@
+body {
+  overflow: hidden;
+}
 .h_log {
   text-align: center;
-  border: 1px solid black;
+  padding: 20px;
+  color: green;
+  animation-name: h_loganimated;
+  animation-duration: 2s;
+  animation-delay: 1;
+  animation-fill-mode: forwards;
 }
+
 .con_custom {
   width: 100%;
   height: calc(100vh - 50px);
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
-.con_custom_item {
+.con_custom_item:first-child {
   width: 40vw;
+  position: absolute;
+}
+
+.con_custom_item:last-child {
+  opacity: 0;
+  width: 0;
+}
+
+.frm_pad {
+  padding: 20px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  animation-name: formanim;
+  animation-duration: 2s;
+  animation-delay: 1;
+  animation-fill-mode: forwards;
+}
+
+/* Animated */
+
+@keyframes h_loganimated {
+  0% {
+    margin-bottom: 500px;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    margin-bottom: 0;
+  }
+}
+
+@keyframes formanim {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes logDiv {
+  0% {
+    margin-left: -500px;
+  }
+  100% {
+    margin-left: 0;
+  }
+}
+
+@keyframes regDiv {
+  0% {
+    margin-right: -500px;
+  }
+  100% {
+    margin-right: 0;
+  }
 }
