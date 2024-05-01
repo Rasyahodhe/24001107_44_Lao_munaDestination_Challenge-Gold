@@ -9,7 +9,7 @@ const carousel = () => {
         <div className="carousel-inner">
           <div className="carousel-item active">
             <img
-              src="https://live.staticflickr.com/5180/5595837972_f5c13f3cd5_b.jpg"
+              src="https://raw.githubusercontent.com/Rasyahodhe/24001107_44_Lao_munaDestination_Challenge-Gold/develop/client/src/components/photo/1.jpg"
               className="d-block w-100"
               alt="Foto pertama"
             ></img>
@@ -21,7 +21,11 @@ const carousel = () => {
             </div>
           </div>
           <div className="carousel-item">
-            <img src="" className="d-block w-100" alt="..."></img>
+            <img
+              src="https://github.com/Rasyahodhe/24001107_44_Lao_munaDestination_Challenge-Gold/blob/develop/client/src/components/photo/2.jpg"
+              className="d-block w-100"
+              alt="..."
+            ></img>
             <div class="carousel-caption d-none d-md-block">
               <h5>First slide label</h5>
               <p>
