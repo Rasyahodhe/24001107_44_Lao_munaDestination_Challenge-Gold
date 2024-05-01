@@ -12,10 +12,11 @@ reg.addEventListener("click", () => {
 
   logdiv.style.opacity = "0";
   logdiv.style.position = "none";
-  logdiv.style.width = "0vw";
+  // logdiv.style.width = "0vw";
   logdiv.style.animationName = "logDiv";
   logdiv.style.animationDuration = "2s";
-  logdiv.style.transition = "1s";
+  logdiv.style.transition = "0.5s";
+  logdiv.style.zIndex = "0";
 });
 
 log.addEventListener("click", () => {
@@ -24,11 +25,12 @@ log.addEventListener("click", () => {
   logdiv.style.width = "40vw";
   logdiv.style.animationName = "regDiv";
   logdiv.style.animationDuration = "2s";
+  logdiv.style.zIndex = "1";
 
   regdiv.style.opacity = "0";
   regdiv.style.position = "none";
-  regdiv.style.width = "0vw";
+  // regdiv.style.width = "0vw";
   regdiv.style.animationName = "logDiv";
   regdiv.style.animationDuration = "2s";
-  regdiv.style.transition = "1s";
+  regdiv.style.transition = "0.5s";
 });

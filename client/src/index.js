@@ -1,10 +1,22 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+// import Helmet from "react-helmet";
+// function Custom() {
+//   return (
+//     <Helmet>
+//       <script
+//         defer="defer"
+//         src="./components/script/scr_Navbar.js"
+//         type="text/javascript"
+//       ></script>
+//     </Helmet>
+//   );
+// }
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <App />

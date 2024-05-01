@@ -43,6 +43,15 @@ body {
   animation-fill-mode: forwards;
 }
 
+.frm_reg {
+  padding: 20px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
 /* Animated */
 
 @keyframes h_loganimated {

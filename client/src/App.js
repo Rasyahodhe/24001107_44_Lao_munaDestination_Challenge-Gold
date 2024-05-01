@@ -1,9 +1,11 @@
 import "./App.css";
-import Navbar from "./components/html/Com_Navbar";
+import "../node_modules/bootstrap/dist/js/bootstrap.bundle.js";
+import AllComponents from "./components/all_Components.js";
+
 function App() {
   return (
     <div>
-      <Navbar />
+      <AllComponents />
     </div>
   );
 }
