@@ -9,11 +9,11 @@ const carousel = () => {
         <div className="carousel-inner">
           <div className="carousel-item active">
             <img
-              src="https://raw.githubusercontent.com/Rasyahodhe/24001107_44_Lao_munaDestination_Challenge-Gold/develop/client/src/components/photo/1.jpg"
+              src="https://raw.githubusercontent.com/Rasyahodhe/24001107_44_Lao_munaDestination_Challenge-Gold/develop/client/photo/1.jpg"
               className="d-block w-100"
               alt="Foto pertama"
             ></img>
-            <div class="carousel-caption d-none d-md-block">
+            <div className="carousel-caption d-none d-md-block">
               <h5>First slide label</h5>
               <p>
                 Some representative placeholder content for the first slide.
@@ -22,11 +22,11 @@ const carousel = () => {
           </div>
           <div className="carousel-item">
             <img
-              src="https://github.com/Rasyahodhe/24001107_44_Lao_munaDestination_Challenge-Gold/blob/develop/client/src/components/photo/2.jpg"
+              src="https://raw.githubusercontent.com/Rasyahodhe/24001107_44_Lao_munaDestination_Challenge-Gold/develop/client/photo/2.jpg"
               className="d-block w-100"
               alt="..."
             ></img>
-            <div class="carousel-caption d-none d-md-block">
+            <div className="carousel-caption d-none d-md-block">
               <h5>First slide label</h5>
               <p>
                 Some representative placeholder content for the first slide.
@@ -34,8 +34,12 @@ const carousel = () => {
             </div>
           </div>
           <div className="carousel-item">
-            <img src="" className="d-block w-100" alt="..."></img>
-            <div class="carousel-caption d-none d-md-block">
+            <img
+              src="https://raw.githubusercontent.com/Rasyahodhe/24001107_44_Lao_munaDestination_Challenge-Gold/develop/client/photo/3.jpg"
+              className="d-block w-100"
+              alt="..."
+            ></img>
+            <div className="carousel-caption d-none d-md-block">
               <h5>First slide label</h5>
               <p>
                 Some representative placeholder content for the first slide.

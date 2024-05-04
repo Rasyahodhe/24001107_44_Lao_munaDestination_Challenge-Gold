@@ -2,7 +2,7 @@ import { hendlerClick, hendlerClickimg } from "../script/scr_Navbar";
 
 function Navbar() {
   return (
-    <navbar>
+    <nav>
       <img
         className="img_logo"
         src="https://th.bing.com/th/id/R.7f3c8507b9d5eea32869a0124674a63d?rik=ffNo1E8ILppazQ&riu=http%3a%2f%2fpngimg.com%2fuploads%2fcar_logo%2fcar_logo_PNG1667.png&ehk=bHVzvjpqTKRVFQHVicQgtIsdIsneSZTad4bCD5yDCNI%3d&risl=&pid=ImgRaw&r=0"
@@ -11,13 +11,13 @@ function Navbar() {
       ></img>
       <ul className="menu" id="tog_menu">
         <li>
-          <a href="/">Destinasi</a>{" "}
+          <a href="/destinations">Destinasi</a>{" "}
         </li>
         <li>
           <a href="/">Recomended</a>{" "}
         </li>
         <li>
-          <a href="/">About</a>
+          <a href="/about">About</a>
         </li>
       </ul>
 
@@ -34,7 +34,7 @@ function Navbar() {
           onClick={hendlerClick}
         ></input>
       </div>
-    </navbar>
+    </nav>
   );
 }
 

@@ -1,5 +1,9 @@
 @import "./components/all_Style.css";
 
+* {
+  padding: 0;
+  margin: 0;
+}
 body {
   padding: 20px;
 }
