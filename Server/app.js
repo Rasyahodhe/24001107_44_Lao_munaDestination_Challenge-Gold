@@ -5,6 +5,7 @@ const app = express(),
   port = 3300;
 const { route } = require("./router/admin.route.js");
 const { route_d } = require("./router/des.route.js");
+const { route_c } = require("./router/client.route.js");
 
 // makes it easier to move pages
 app.set("view engine", "ejs");
@@ -20,6 +21,7 @@ app.use(express.urlencoded({ extended: false }));
 // Get The Router Admin
 app.use(route);
 app.use(route_d);
+app.use(route_c);
 
 app.listen(port, () => {
   console.log(`Server Active, this program run in http://localhost:${port}`);

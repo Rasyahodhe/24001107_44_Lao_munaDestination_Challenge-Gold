@@ -1,3 +1,5 @@
+const fs = require("fs");
+
 const {
   loadAdmin,
   addAdmin,
@@ -18,7 +20,7 @@ const getData_Login = (req, res) => {
   const username = req.body.username;
   const pass = req.body.password;
   if (username === "rasyah" && pass === "123") {
-    res.redirect("/dashboard");
+    res.redirect("/ad/dash");
   }
 };
 
@@ -29,6 +31,16 @@ const page_reg = (req, res) => {
     menu: "./addAdmin.ejs",
     header: "regis Admin",
   });
+};
+
+const saveAdmin = (admin) => {
+  fs.writeFileSync("data/admins.json", JSON.stringify(admin));
+};
+
+const add_admin = (admin) => {
+  const admins = loadAdmin();
+  admins.push(admin);
+  saveAdmin(admins);
 };
 
 module.exports = {

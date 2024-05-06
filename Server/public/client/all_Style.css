@@ -1,0 +1,12 @@
+@import "./style/recomen.css";
+@import "./style/navbar.css";
+/* bagian Destination */
+@import "./style/search.css";
+@import "./style/card.css";
+@import "./style/boostrap/boostrap.css";
+@import "./style/header.css";
+@import "./style/footer.css";
+
+.space {
+  height: 34px;
+}

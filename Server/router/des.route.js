@@ -13,28 +13,28 @@ const {
 } = require("../controller/controller.Destination.js");
 
 //=====================================================Setting Dashboar
-route_d.get("/dashboard", page_Dashboard);
+route_d.get("/ad/dash", page_Dashboard);
 
 //=================================================== Setting Halaman ADD DATA
 // For get Page Add Data
 route_d
-  .get("/dashboard/adddata", page_Adddestination)
-  .post("/dashboard/adddata", add_Destination);
+  .get("/ad/dash/add", page_Adddestination)
+  .post("ad/dash/add", add_Destination);
 
 //=================================================== Setting Halaman SHOW ALL DATA
 // For get page ShowAllData
-route_d.get("/dashboard/showalldata", show_Destinations);
+route_d.get("/ad/dash/destinations", show_Destinations);
 
 // API untuk menangkap Detail
-route_d.get("/dashboard/showalldata/detail/:nama", detail_Destination);
+route_d.get("/ad/dash/destinations/det/:nama", detail_Destination);
 
 // //=================================================== Setting Halaman UPDATE DATA
 // API untuk mengupdate Salah satu item
 route_d
-  .get("/dashboard/showalldata/updata:/id", page_Update)
-  .put("/dashboard/showalldata/updata/:id", update_Destination);
+  .get("/ad/dash/destinations/updata:/id", page_Update)
+  .put("/ad/dash/destinations/updata/:id", update_Destination);
 
 //Router Untuk menghapus salah satu item
-route_d.delete("/dashboard/showalldata/deldata/:id", det_Destination);
+route_d.delete("/ad/dash/destinations/del/:id", det_Destination);
 
 module.exports = { route_d };
