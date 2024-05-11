@@ -3,7 +3,6 @@ const morgan = require("morgan");
 const app = express(),
   expressEjsLayouts = require("express-ejs-layouts"),
   port = 3300;
-const { route } = require("./router/admin.route.js");
 const { route_d } = require("./router/des.route.js");
 const { route_c } = require("./router/client.route.js");
 const { route_Log } = require("./router/login.route.js");
@@ -20,8 +19,6 @@ app.use(express.urlencoded({ extended: false }));
 
 // Get The Router Login
 app.use(route_Log);
-// Get The Router Admin
-app.use(route);
 // Get The Router Destinations
 app.use(route_d);
 // Get The Router Client

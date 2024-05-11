@@ -10,9 +10,6 @@ const page_Login = (req, res) => {
 const getData_Login = (req, res) => {
   const username = req.body.username;
   const pass = req.body.password;
-  if (username === "rasyah" && pass === "123") {
-    res.redirect("/ad/dash");
-  }
   if (username === "indra" && pass === "234") {
     res.redirect("/cl/dash");
   }
