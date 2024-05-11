@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "name": "indra",
+    "email": "indraPurnomo@gmail.com",
+    "username":"indra232",
+    "pass": "123",
+    "conpass": "123"
+  },
+  {
+    "id": 2,
+    "name": "rasyah",
+    "email": "rasyahpurnomo@gmail.com",
+    "username":"rasyah232",
+    "pass": "234",
+    "conpass": "234"
+  }
+]
