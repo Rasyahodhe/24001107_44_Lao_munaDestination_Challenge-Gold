@@ -7,8 +7,9 @@ This Web for users if they want to know about destination in muna.
  
  if you want to run this web you should following instruction
 
+-> Download or clone this repositeori to your computer or your device.
 
--> Open `Git bash` in folder project after that write code in git bash like this :,
+-> next Open `Git bash` in the project folder downloaded from this repositori after that write code in git bash like this :,
 ```
 code .
 ```
