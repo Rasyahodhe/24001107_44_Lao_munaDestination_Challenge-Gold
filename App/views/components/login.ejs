@@ -1,100 +1,119 @@
 <div class="con_custom">
   <div class="con_custom_item" id="logdiv">
-    <h1 class="h_log">Login</h1>
-    <form method="post" action="/" class="frm_pad">
-      <div class="mb-3">
-        <label for="username" class="form-label">Username</label>
-        <input
-          type="text"
-          class="form-control"
-          id="username"
-          name="username"
-          aria-describedby="emailHelp"
-          required
-        />
-        <div id="emailHelp" class="form-text">
-          We'll never share your email with anyone else.
+    <div class="image_Logdiv">
+      <img src="asset/logo/logowhite.png" alt="foto" />
+    </div>
+    <div class="con_Logdiv">
+      <h1 class="h_log">Login</h1>
+      <form method="post" action="/" class="frm_log">
+        <div class="mb-3">
+          <label for="username" class="form-label"
+            ><i class="bi bi-person"></i> Username</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="username"
+            name="username"
+            aria-describedby="emailHelp"
+            placeholder="@example : ras_12yah"
+            required
+          />
         </div>
-      </div>
-      <div class="mb-3">
-        <label for="password" class="form-label">Password</label>
-        <input
-          type="password"
-          class="form-control"
-          id="password"
-          name="password"
-          required
-        />
-      </div>
-      <button type="submit" class="btn btn-primary">
-        <!-- <a href="/dashboard" style="color: white"> Login</a> -->
-        Login
-      </button>
-      <!-- <a href="" class="btn btn-primary" id="reg">Sign Up </a> -->
-      <button type="button" class="btn btn-primary" id="btnReg">
-        <!-- <a href="/dashboard" style="color: white"> Login</a> -->
-        Sign Up
-      </button>
-    </form>
+        <div class="mb-3">
+          <label for="password" class="form-label"
+            ><i class="bi bi-lock"></i> Password</label
+          >
+          <input
+            type="password"
+            class="form-control"
+            id="password"
+            name="password"
+            placeholder="......."
+            required
+          />
+        </div>
+        <button type="submit" class="btn btn-outline-dark">
+          <!-- <a href="/dashboard" style="color: white"> Login</a> -->
+          Login
+        </button>
+        <!-- <a href="" class="btn btn-primary" id="reg">Sign Up </a> -->
+        <button type="button" class="btn btn-outline-dark" id="btnReg">
+          <!-- <a href="/dashboard" style="color: white"> Login</a> -->
+          Sign Up
+        </button>
+      </form>
+    </div>
   </div>
 
   <div class="con_custom_item" id="regdiv">
-    <h1 class="h_log">Registration</h1>
-    <form method="post" action="/dashboard/regisadmin" class="frm_reg">
-      <div class="mb-3">
-        <input
-          type="hidden"
-          class="form-control"
-          id="idDes"
-          name="idDes"
-          aria-describedby="emailHelp"
-        />
-      </div>
-      <div class="mb-3">
-        <label for="adminName" class="form-label">Name</label>
-        <input
-          type="text"
-          class="form-control"
-          id="adminName"
-          name="adminName"
-          aria-describedby="emailHelp"
-          required
-        />
-      </div>
-      <div class="mb-3">
-        <label for="adminName" class="form-label">Username</label>
-        <input
-          type="text"
-          class="form-control"
-          id="adminName"
-          name="adminName"
-          aria-describedby="emailHelp"
-          required
-        />
-      </div>
-      <div class="mb-3">
-        <label for="passadmin" class="form-label">Password</label>
-        <input
-          type="text"
-          class="form-control"
-          name="passadmin"
-          id="passadmin"
-          required
-        />
-      </div>
-      <div class="mb-3">
-        <label for="cpadmin" class="form-label">Confirm Password</label>
-        <input
-          type="text"
-          class="form-control"
-          name="cpadmin"
-          id="cpadmin"
-          required
-        />
-      </div>
+    <div class="image_Regdiv">
+      <img src="asset/logo/logowhite.png" alt="" />
+    </div>
+    <div class="con_Regdiv">
+      <h1 class="h_log">Registration</h1>
+      <form method="post" action="/dashboard/regisadmin" class="frm_reg">
+        <div class="mb-3">
+          <input
+            type="hidden"
+            class="form-control"
+            id="idDes"
+            name="idDes"
+            aria-describedby="emailHelp"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="adminName" class="form-label">Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="adminName"
+            name="adminName"
+            placeholder="Ras***"
+            aria-describedby="emailHelp"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="adminName" class="form-label">Username</label>
+          <input
+            type="text"
+            class="form-control"
+            id="adminName"
+            name="adminName"
+            placeholder="ras***"
+            aria-describedby="emailHelp"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="passadmin" class="form-label">Password</label>
+          <input
+            type="text"
+            class="form-control"
+            name="passadmin"
+            placeholder="........"
+            id="passadmin"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="cpadmin" class="form-label">Confirm Password</label>
+          <input
+            type="text"
+            class="form-control"
+            name="cpadmin"
+            placeholder="......"
+            id="cpadmin"
+            required
+          />
+        </div>
 
-      <button type="submit" class="btn btn-primary">Registration</button>
-      <button type="button" class="btn btn-primary" id="btnLog">Login</button>
-    </form>
+        <button type="submit" class="btn btn-outline-dark">Registration</button>
+        <button type="button" class="btn btn-outline-dark" id="btnLog">
+          Login
+        </button>
+      </form>
+    </div>
   </div>
 </div>

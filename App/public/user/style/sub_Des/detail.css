@@ -1,0 +1,54 @@
+article {
+  width: 100%;
+  height: fit-content;
+}
+
+article .det_cont {
+  display: flex;
+  justify-content: center;
+  gap: 2vw;
+}
+article .det_cont figure img {
+  width: 50vw;
+}
+
+article .det_cont figcaption {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Bagian Explain */
+article .det_explain {
+  display: flex;
+  justify-content: center;
+}
+
+article .det_explain div {
+  width: 70%;
+}
+
+article .det_explain .exp {
+  padding: 20px;
+}
+article .det_explain .exp p {
+  text-align: justify;
+}
+
+@media (max-width: 800px) {
+  article .det_cont {
+    align-items: center;
+    justify-content: center;
+  }
+  article .det_explain {
+    flex-direction: column;
+    gap: 2vh;
+    align-items: center;
+  }
+  article .det_explain {
+    width: 100%;
+  }
+  article .det_explain div {
+    width: 70%;
+  }
+}

@@ -11,7 +11,7 @@ const getData_Login = (req, res) => {
   const username = req.body.username;
   const pass = req.body.password;
   if (username === "indra" && pass === "234") {
-    res.redirect("/cl/dash");
+    res.redirect("/us/dash");
   }
 };
 

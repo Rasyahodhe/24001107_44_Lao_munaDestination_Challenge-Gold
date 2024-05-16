@@ -1,0 +1,6 @@
+@import "./header.css";
+@import "./recomen.css";
+
+.all_con_container {
+  min-height: 100vh;
+}

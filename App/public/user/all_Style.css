@@ -1,0 +1,22 @@
+@import "./style/sub_Home/all.Style.Home.css";
+
+@import "./style/navbar.css";
+
+/* bagian Destination */
+@import "./style/sub_Des/all.Style.Des.css";
+@import "./style/boostrap/boostrap.css";
+
+/*  Bagian About */
+@import "./style/about.css";
+
+@import "./style/footer.css";
+
+.space {
+  height: 80px;
+}
+
+@media (max-width: 748px) {
+  .space {
+    height: 10px;
+  }
+}

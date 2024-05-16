@@ -1,10 +1,14 @@
+* {
+  padding: 0;
+  margin: 0;
+}
 body {
   overflow: hidden;
 }
 .h_log {
   text-align: center;
   padding: 20px;
-  color: green;
+  color: rgb(56, 56, 56);
   animation-name: h_loganimated;
   animation-duration: 2s;
   animation-delay: 1;
@@ -13,23 +17,36 @@ body {
 
 .con_custom {
   width: 100%;
-  height: calc(100vh - 50px);
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
 }
+/* Setting Page Login */
 .con_custom_item:first-child {
-  width: 40vw;
+  width: 100%;
   position: absolute;
+  display: flex;
+  gap: 10px;
+  opacity: 1;
 }
-
-.con_custom_item:last-child {
-  opacity: 0;
-  width: 0;
+.con_custom_item:first-child .image_Logdiv {
+  display: flex;
+  align-items: center;
+  border: 1px solid black;
+  border-top-left-radius: 50px;
+  padding: 10px;
+  background-color: rgb(56, 56, 56);
 }
-
-.frm_pad {
+.con_custom_item:first-child .image_Logdiv img {
+  width: 40vw;
+}
+.con_custom_item:first-child .con_Logdiv {
+  width: 60vw;
+  z-index: 1;
+}
+.frm_log {
   padding: 20px;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
   border-radius: 10px;
@@ -43,6 +60,30 @@ body {
   animation-fill-mode: forwards;
 }
 
+/* Setting Page Registri */
+.con_custom_item:last-child {
+  width: 100%;
+  opacity: 0;
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 10px;
+}
+
+.con_custom_item:last-child .image_Regdiv {
+  background-color: rgb(56, 56, 56);
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-top-right-radius: 50px;
+}
+.con_custom_item:last-child .image_Regdiv img {
+  width: 40vw;
+}
+
+.con_custom_item:last-child .con_Regdiv {
+  width: 100vw;
+}
+
 .frm_reg {
   padding: 20px;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
@@ -52,8 +93,9 @@ body {
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
 }
-/* Animated */
+/* =====Animated=== */
 
+/* text head */
 @keyframes h_loganimated {
   0% {
     margin-bottom: 500px;
@@ -65,6 +107,7 @@ body {
   }
 }
 
+/*form*/
 @keyframes formanim {
   0% {
     opacity: 0;
@@ -74,6 +117,7 @@ body {
   }
 }
 
+/* For page login and Registration */
 @keyframes logDiv {
   0% {
     margin-left: -500px;
@@ -89,5 +133,59 @@ body {
   }
   100% {
     margin-right: 0;
+  }
+}
+
+/* Responsive */
+@media (max-width: 530px) {
+  .con_custom {
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+  }
+  /* Setting page login */
+  .con_custom_item:first-child {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+  .con_custom_item:first-child .image_Logdiv {
+    width: 100%;
+    border-radius: 20px 20px 0px 0px;
+    -webkit-border-radius: 20px 20px 0px 0px;
+    -moz-border-radius: 20px 20px 0px 0px;
+    -ms-border-radius: 20px 20px 0px 0px;
+    -o-border-radius: 20px 20px 0px 0px;
+    justify-content: center;
+  }
+  .con_custom_item:first-child .image_Logdiv img {
+    width: 50vw;
+  }
+  .con_custom_item:first-child .con_Logdiv {
+    width: 100%;
+  }
+
+  /* Setting page Registration */
+  .con_custom_item:last-child {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
+  }
+  .con_custom_item:last-child .image_Regdiv {
+    width: 100%;
+    border-radius: 20px 20px 0px 0px;
+    -webkit-border-radius: 20px 20px 0px 0px;
+    -moz-border-radius: 20px 20px 0px 0px;
+    -ms-border-radius: 20px 20px 0px 0px;
+    -o-border-radius: 20px 20px 0px 0px;
+    justify-content: center;
+  }
+  .con_custom_item:last-child .image_Regdiv img {
+    width: 50vw;
+  }
+  .con_custom_item:last-child .con_Regdiv {
+    width: 100%;
   }
 }

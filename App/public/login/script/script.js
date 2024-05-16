@@ -6,7 +6,7 @@ const regdiv = document.getElementById("regdiv");
 reg.addEventListener("click", () => {
   regdiv.style.opacity = "1";
   regdiv.style.position = "absolute";
-  regdiv.style.width = "40vw";
+  regdiv.style.width = "85vw";
   regdiv.style.animationName = "regDiv";
   regdiv.style.animationDuration = "2s";
 
@@ -22,7 +22,7 @@ reg.addEventListener("click", () => {
 log.addEventListener("click", () => {
   logdiv.style.opacity = "1";
   logdiv.style.position = "absolute";
-  logdiv.style.width = "40vw";
+  logdiv.style.width = "85vw";
   logdiv.style.animationName = "regDiv";
   logdiv.style.animationDuration = "2s";
   logdiv.style.zIndex = "1";

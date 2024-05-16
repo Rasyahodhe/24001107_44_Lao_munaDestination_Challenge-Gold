@@ -9,7 +9,6 @@ const {
 } = require("../controller/controller.Login.js");
 
 // ====================================================Setting Login
-route_Log.get("/", page_Login);
-route_Log.post("/", getData_Login);
+route_Log.get("/", page_Login).post("/", getData_Login);
 
 module.exports = { route_Log };

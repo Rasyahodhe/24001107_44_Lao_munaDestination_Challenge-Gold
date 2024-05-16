@@ -2,12 +2,16 @@
   {
     "idDes": "1",
     "namaDes": "Meleura Beach",
-    "description": "Meleura beach adalah destinasi wisata yang meirip dengan raja ampat"
+    "description": "Meleura beach adalah destinasi wisata yang meirip dengan raja ampat",
+    "text": "",
+    "src": ""
   },
   {
     "idDes": "2",
-    "namaDes": "kenangan",
-    "description": "sadasdasdasdpkmalksdnajsnd",
-    "aboutdes": "sdasdasd"
+    "namaDes": "Pantai Labobo",
+    "description": "Pantai Labobo Terletak di Buton tengah,pantai ini terkenal dengan ",
+    "text": "",
+    "aboutdes": "sdasdasd",
+    "src": ""
   }
 ]

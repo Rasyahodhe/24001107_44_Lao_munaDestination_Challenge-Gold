@@ -1,0 +1,10 @@
+@import "./card.css";
+@import "./search.css";
+@import "./detail.css";
+
+.des_container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 3vh;
+}
