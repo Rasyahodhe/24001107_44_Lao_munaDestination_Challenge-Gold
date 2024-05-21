@@ -8,8 +8,6 @@ const { route_Log } = require("./router/login.route.js");
 
 // Api Global
 
-const { r_global_us } = require("./router/grobal_Route/g.users.route.js");
-
 // makes it easier to move pages
 app.set("view engine", "ejs");
 app.use(expressEjsLayouts);
@@ -19,7 +17,7 @@ app.use(express.static("public"));
 app.use("/", morgan("dev"));
 // For Json
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: true }));
 
 // Get The Router Login
 app.use(route_Log);
@@ -27,7 +25,8 @@ app.use(route_Log);
 app.use(route_u);
 
 // ===============================Api Global
-app.use(r_global_us);
+
+// ==============================Api Global Destinations
 
 app.listen(port, () => {
   console.log(`Server Active, this program run in http://localhost:${port}`);
