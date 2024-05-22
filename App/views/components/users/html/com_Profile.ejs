@@ -1,0 +1,17 @@
+<div class="profile_cont">
+  <div class="user_profile">
+    <img src="" alt="" />
+    <% user.forEach(u => { %>
+    <h2><%=u.name%></h2>
+    <hr />
+    <p><b>Email</b> : <%=u.email%></p>
+    <hr />
+    <p><b>Phone</b> : <%=u.phone%></p>
+    <hr />
+    <p><b>Username</b> : <%=u.username%></p>
+    <hr />
+    <p><b>Password</b> : <%=u.password%></p>
+    <hr />
+    <% }) %>
+  </div>
+</div>

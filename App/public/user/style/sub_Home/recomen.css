@@ -18,6 +18,9 @@
 .article_Container .recomdes_container .recomdes_head {
   width: 90%;
 }
+.article_Container .recomdes_container .recomdes_head h1 b {
+  color: orange;
+}
 .article_Container .recomdes_container .recomdes_head p {
   font-size: 15px;
 }
@@ -155,6 +158,7 @@
   .article_Container .recomdes_container .recomdes_head h1 {
     font-size: 6vw;
   }
+
   .article_Container .recomdes_container .recomdes_head p {
     font-size: 3vw;
   }

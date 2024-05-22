@@ -1,5 +1,5 @@
     <nav>
-     <a href="/us/dash">
+     <a href="/<%=name %>/dash">
       <img
       class="img_logo"
       src="/asset/logo/logo.png"
@@ -8,20 +8,19 @@
      </a>
       <ul class="menu" id="tog_menu">
         <li class="item_menu">
-          <a href="/us/des"><i class="bi bi-globe-asia-australia"></i> Destinasi</a>
+          <a href="/<%=name  %>/des"><i class="bi bi-globe-asia-australia"></i> Destinasi</a>
         </li >
         <li class="item_menu">
-          <a href="/us/about"><i class="bi bi-info-circle-fill"></i> About</a>
+          <a href="/<%=name %>/about"><i class="bi bi-info-circle-fill"></i> About</a>
         </li>
         <li>
           <div class="cont_Profile">
             <div class="dropdown">
               <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                <i class="bi bi-person-circle"></i> User
+                <i class="bi bi-person-circle"></i> <%=name%>
               </button>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item text-dark" href="#">Action</a></li>
-                <li><a class="dropdown-item text-dark" href="#">Another action</a></li>
+                <li><a class="dropdown-item text-dark" href="/<%=name%>/profile">Show Profile</a></li>
                 <li><a class="dropdown-item text-dark" href="/">Log Out</a></li>
               </ul>
             </div>

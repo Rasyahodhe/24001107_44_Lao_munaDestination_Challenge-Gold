@@ -10,6 +10,7 @@
 @import "./style/about.css";
 
 @import "./style/footer.css";
+@import "./style/profile.css";
 
 .space {
   height: 80px;

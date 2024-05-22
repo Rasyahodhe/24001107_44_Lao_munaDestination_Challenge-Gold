@@ -10,12 +10,14 @@ const getuserByid = async (id) => {
   return user;
 };
 
-const getuserByname = async (name) => {
-  const user = await db("users").select("*").where({ name_user: name });
+const getuserByusername = async (name) => {
+  const user = await db("users").select("*").where({ username: name });
+  return user;
 };
 
 const addUser = async (data) => {
   const addUser = await db("users").insert(data, ["*"]);
+  return addUser;
 };
 
 const updateUser = async (data) => {
@@ -33,7 +35,7 @@ const dellUser = async (id) => {
 module.exports = {
   users,
   getuserByid,
-  getuserByname,
+  getuserByusername,
   addUser,
   updateUser,
   dellUser,

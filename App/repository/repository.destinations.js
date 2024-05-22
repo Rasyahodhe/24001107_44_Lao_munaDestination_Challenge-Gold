@@ -11,10 +11,10 @@ const getDestinationByid = async (id) => {
     .where({ destination_id: id });
   return destinastion;
 };
-const getDestinationByname = async (name) => {
+const getDestinationByname = async (namedes) => {
   const destinastion = await db("destinations")
     .select("*")
-    .where({ destination_name: name });
+    .where({ destination_name: namedes });
   return destinastion;
 };
 

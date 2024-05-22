@@ -1,8 +1,6 @@
 const express = require("express");
 const route_Log = express.Router();
 
-const { body, validationResult, check, header } = require("express-validator");
-
 const {
   page_Login,
   getData_Login,
