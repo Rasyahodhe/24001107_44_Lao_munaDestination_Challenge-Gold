@@ -12,7 +12,7 @@ const us_Dash = (req, res) => {
 
 const us_Des = async (req, res) => {
   const { name } = req.params;
-  const destinations = await destinationsRepository.allDestination();
+  const destinations = await destinationsRepository.allDestinations();
   res.render("./components/users/all_Comp.ejs", {
     title: "Destinations",
     layout: "./layouts/main_Lay_Client.ejs",

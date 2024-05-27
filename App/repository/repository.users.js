@@ -1,4 +1,4 @@
-const db = require("../connector/db");
+const db = require("../config/db");
 
 const users = async () => {
   const users = await db("users").select("*");
@@ -20,7 +20,7 @@ const addUser = async (data) => {
   return addUser;
 };
 
-const updateUser = async (data) => {
+const updateUser = async (data, id) => {
   const updateUser = await db("users")
     .where({ user_id: id })
     .update(data, ["*"]);

@@ -1,25 +1,28 @@
 const fs = require("fs");
 
-const dirPath = "./data";
+const dirPath = "./repository/repo_Global/data";
 if (!fs.existsSync(dirPath)) {
   fs.mkdirSync(dirPath);
 }
 
 // Make Admin.json in forlder Data
-const dataPath = "./data/users.json";
+const dataPath = "./repository/repo_Global/data/users.json";
 if (!fs.existsSync(dataPath)) {
   fs.writeFileSync(dataPath, "[]", "utf-8");
 }
 
 // Get All Data Admin.json
 const loadUsers = () => {
-  const fileBuffer = fs.readFileSync("data/users.json");
+  const fileBuffer = fs.readFileSync("repository/repo_Global/data/users.json");
   const users = JSON.parse(fileBuffer);
   return users;
 };
 
 const saveUser = (user) => {
-  fs.writeFileSync("data/users.json", JSON.stringify(user));
+  fs.writeFileSync(
+    "repository/repo_Global/data/users.json",
+    JSON.stringify(user)
+  );
 };
 
 // function for create or add new client
@@ -48,11 +51,27 @@ const searchUser = (user) => {
   const getUser = users[index];
   return getUser;
 };
+const finData = (user) => {
+  const users = loadUsers();
+  const findUser = users.find((u) => {
+    return u.name === user;
+  });
+  return findUser;
+};
 
+const findDataById = (id) => {
+  const users = loadUsers();
+  const findUser = users.find((u) => {
+    return u.id === +id;
+  });
+  return findUser;
+};
 module.exports = {
   loadUsers,
   searchUser,
   addUser,
   updateUser,
   delUser,
+  finData,
+  findDataById,
 };

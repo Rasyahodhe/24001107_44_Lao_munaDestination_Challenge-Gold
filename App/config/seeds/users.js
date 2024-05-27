@@ -30,5 +30,21 @@ exports.seed = async function (knex) {
       password: "indah123",
       confirm_password: "indah123",
     },
+    {
+      name: "Rio Ahmad Pamda ",
+      email: "ahmadpamda@gmail.com",
+      phone: "088728465832",
+      username: "rioPahmad12",
+      password: "rioA12pam",
+      confirm_password: "rioA12pam",
+    },
+    {
+      name: "Shinta Amalia Widya",
+      email: "amaliashintawid19@gmail.com",
+      phone: "086546356271",
+      username: "widya0919",
+      password: "widya0919",
+      confirm_password: "widya0919",
+    },
   ]);
 };

@@ -142,7 +142,6 @@
   /* Setting content_image_header */
   .content_cont .content_item_cont .img_content {
     width: 100%;
-    border: 1px solid black;
     margin: 0px;
   }
   .content_cont .content_item_cont .img_content img {

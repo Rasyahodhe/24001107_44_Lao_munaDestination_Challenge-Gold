@@ -43,6 +43,7 @@
           Sign Up
         </button>
       </form>
+      <h6 style="color: red; text-align: center"><%=info%></h6>
     </div>
   </div>
 
@@ -52,8 +53,8 @@
     </div>
     <div class="con_Regdiv">
       <h1 class="h_log">Registration</h1>
-      <form method="post" action="/dashboard/regisadmin" class="frm_reg">
-        <div class="mb-3">
+      <form method="post" action="/regis" class="frm_reg">
+        <div class="mb-2">
           <input
             type="hidden"
             class="form-control"
@@ -62,49 +63,73 @@
             aria-describedby="emailHelp"
           />
         </div>
-        <div class="mb-3">
-          <label for="adminName" class="form-label">Name</label>
+        <div class="mb-2">
+          <label for="nameUser" class="form-label">Name</label>
           <input
             type="text"
             class="form-control"
-            id="adminName"
-            name="adminName"
-            placeholder="Ras***"
+            id="nameUser"
+            name="nameUser"
+            placeholder="Ras...."
             aria-describedby="emailHelp"
             required
           />
         </div>
-        <div class="mb-3">
-          <label for="adminName" class="form-label">Username</label>
+        <div class="mb-2">
+          <label for="emailUser" class="form-label">Email</label>
           <input
             type="text"
             class="form-control"
-            id="adminName"
-            name="adminName"
-            placeholder="ras***"
+            id="emailUser"
+            name="emailUser"
+            placeholder="@Example Ras.....@gmail.com"
             aria-describedby="emailHelp"
             required
           />
         </div>
-        <div class="mb-3">
-          <label for="passadmin" class="form-label">Password</label>
+        <div class="mb-2">
+          <label for="phoneUser" class="form-label">Phone</label>
           <input
             type="text"
             class="form-control"
-            name="passadmin"
+            id="phoneUser"
+            name="phoneUser"
+            placeholder="085201199817"
+            aria-describedby="emailHelp"
+            required
+          />
+        </div>
+        <div class="mb-2">
+          <label for="usernameUser" class="form-label">Username</label>
+          <input
+            type="text"
+            class="form-control"
+            id="usernameUser"
+            name="usernameUser"
+            placeholder="ras...."
+            aria-describedby="emailHelp"
+            required
+          />
+        </div>
+        <div class="mb-2">
+          <label for="passUser" class="form-label">Password</label>
+          <input
+            type="text"
+            class="form-control"
+            name="passUser"
             placeholder="........"
-            id="passadmin"
+            id="passUser"
             required
           />
         </div>
-        <div class="mb-3">
-          <label for="cpadmin" class="form-label">Confirm Password</label>
+        <div class="mb-2">
+          <label for="confirmPass" class="form-label">Confirm Password</label>
           <input
             type="text"
             class="form-control"
-            name="cpadmin"
+            name="confirmPass"
             placeholder="......"
-            id="cpadmin"
+            id="confirmPass"
             required
           />
         </div>

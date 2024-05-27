@@ -31,5 +31,9 @@
   .card_Container .card_List {
     flex-direction: column;
     width: 100%;
+    border: 1px solid black;
+  }
+  .card_Container .card_List .card_List_Item {
+    width: 100%;
   }
 }

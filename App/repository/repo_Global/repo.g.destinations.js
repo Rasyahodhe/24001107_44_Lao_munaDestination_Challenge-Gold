@@ -1,20 +1,23 @@
 const fs = require("fs");
 
 // Make Folder Data
-const dirPath = "./data";
+const dirPath = "./repository/repo_Global/data";
 if (!fs.existsSync(dirPath)) {
   fs.mkdirSync(dirPath);
 }
 
 // Make Destination.json in Folder Data
-const dataPath = "./data/destinations.json";
+const dataPath = "./repository/repo_Global/data/destinations.json";
 if (!fs.existsSync(dataPath)) {
   fs.writeFileSync(dataPath, "[]", "utf-8");
 }
 
 // Get All Data Destination.json
 const loadDestinations = () => {
-  const fileBuffer = fs.readFileSync("data/destinations.json", "utf-8");
+  const fileBuffer = fs.readFileSync(
+    "repository/repo_Global/data/destinations.json",
+    "utf-8"
+  );
   const destinations = JSON.parse(fileBuffer);
   return destinations;
 };
@@ -22,7 +25,10 @@ const loadDestinations = () => {
 // Proces Add data
 // Function Save Data to JSON
 const saveData = (destination) => {
-  fs.writeFileSync("data/destinations.json", JSON.stringify(destination));
+  fs.writeFileSync(
+    "repository/repo_Global/data/destinations.json",
+    JSON.stringify(destination)
+  );
 };
 // function for to Add Data
 const addData = (destination) => {
@@ -42,7 +48,11 @@ const updateData = (destination) => {
 // function Delete item
 const delData = (id) => {
   const destinations = loadDestinations();
-  destinations.splice(+id, 1);
+  const getPosition = destinations.find((d) => {
+    d.id === +id;
+  });
+  const indexDes= destinations.indexOf(getPosition);
+  destinations.splice(indexDes, 1);
   saveData(destinations);
 };
 
@@ -56,4 +66,19 @@ const finData = (destination) => {
   return finddestination;
 };
 
-module.exports = { loadDestinations, addData, finData, delData, updateData };
+const findDataById = (id) => {
+  const destinations = loadDestinations();
+  const findDestination = destinations.find((d) => {
+    return d.id === +id;
+  });
+  return findDestination;
+};
+
+module.exports = {
+  loadDestinations,
+  addData,
+  finData,
+  findDataById,
+  delData,
+  updateData,
+};

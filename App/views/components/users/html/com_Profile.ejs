@@ -1,7 +1,13 @@
 <div class="profile_cont">
   <div class="user_profile">
-    <img src="" alt="" />
     <% user.forEach(u => { %>
+    <div class="user_image">
+      <img
+        src="https://raw.githubusercontent.com/Rasyahodhe/24001107_44_Lao_munaDestination_Challenge-Gold/main/photo/profile/user.png"
+        alt=" user_image"
+      />
+    </div>
+
     <h2><%=u.name%></h2>
     <hr />
     <p><b>Email</b> : <%=u.email%></p>

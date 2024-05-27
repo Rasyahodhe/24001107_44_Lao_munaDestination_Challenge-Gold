@@ -12,3 +12,23 @@
 .profile_cont .user_profile h2 {
   text-align: center;
 }
+.profile_cont .user_profile .user_image {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.profile_cont .user_profile .user_image img {
+  width: 20vw;
+  text-align: center;
+}
+
+@media (max-width: 576px) {
+  .profile_cont .user_profile {
+    width: 90%;
+  }
+  .profile_cont .user_profile .user_image img {
+    width: 40vw;
+    text-align: center;
+  }
+}

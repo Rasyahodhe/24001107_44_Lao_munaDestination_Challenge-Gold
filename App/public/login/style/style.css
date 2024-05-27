@@ -30,6 +30,7 @@ body {
   display: flex;
   gap: 10px;
   opacity: 1;
+  z-index: 1;
 }
 .con_custom_item:first-child .image_Logdiv {
   display: flex;
@@ -39,9 +40,11 @@ body {
   padding: 10px;
   background-color: rgb(56, 56, 56);
 }
+/* =============================================================IMG LOGING */
 .con_custom_item:first-child .image_Logdiv img {
   width: 40vw;
 }
+
 .con_custom_item:first-child .con_Logdiv {
   width: 60vw;
   z-index: 1;
@@ -67,6 +70,7 @@ body {
   display: flex;
   flex-direction: row-reverse;
   gap: 10px;
+  z-index: 0;
 }
 
 .con_custom_item:last-child .image_Regdiv {
@@ -76,12 +80,18 @@ body {
   padding: 10px;
   border-top-right-radius: 50px;
 }
+/* ==================================================================== IMG REG */
 .con_custom_item:last-child .image_Regdiv img {
   width: 40vw;
 }
 
 .con_custom_item:last-child .con_Regdiv {
   width: 100vw;
+}
+
+.con_custom_item:last-child .con_Regdiv form .mb-3,
+.con_Regdiv form .mb-3 input {
+  font-size: 1vw;
 }
 
 .frm_reg {
@@ -141,7 +151,7 @@ body {
   .con_custom {
     justify-content: center;
     align-items: center;
-    padding-top: 10px;
+    overflow-y: scroll;
   }
   /* Setting page login */
   .con_custom_item:first-child {
@@ -187,5 +197,9 @@ body {
   }
   .con_custom_item:last-child .con_Regdiv {
     width: 100%;
+  }
+  .con_custom_item:last-child .con_Regdiv form .mb-3,
+  .con_Regdiv form .mb-3 input {
+    font-size: 3vw;
   }
 }
