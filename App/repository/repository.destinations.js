@@ -18,6 +18,13 @@ const getDestinationByname = async (namedes) => {
   return destinastion;
 };
 
+const getDestinationByType = async (type) => {
+  const destination = await db("destinations")
+    .select("*")
+    .where({ type: type });
+  return destination;
+};
+
 const addDestination = async (data) => {
   const destination = await db("destinations").insert(data, ["*"]);
   return destination;
@@ -43,6 +50,7 @@ module.exports = {
   allDestinations,
   getDestinationByid,
   getDestinationByname,
+  getDestinationByType,
   addDestination,
   updateDestination,
   deleteDestination,

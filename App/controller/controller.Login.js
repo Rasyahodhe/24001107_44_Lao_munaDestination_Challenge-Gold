@@ -1,5 +1,5 @@
 const usersRepository = require("../repository/repository.users");
-
+const destinationRepository = require("../repository/repository.destinations");
 // Untuk menampilkan form login
 const page_Login = (req, res) => {
   res.render("./components/login.ejs", {
@@ -24,6 +24,9 @@ const getData_Login = async (req, res) => {
       inforeg: "",
     });
   } else {
+    const desAir = await destinationRepository.getDestinationByType("Air");
+    const desDarat = await destinationRepository.getDestinationByType("Darat");
+    
     getUser.forEach((user) => {
       if (username === user.username && password === user.password) {
         return res.render("./components/users/all_Comp.ejs", {
@@ -32,6 +35,8 @@ const getData_Login = async (req, res) => {
           menu: "./html/com_Home.ejs",
           name: user.username,
           user,
+          desAir,
+          desDarat,
         });
       }
     });

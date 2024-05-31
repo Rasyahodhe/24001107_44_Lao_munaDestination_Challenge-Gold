@@ -8,6 +8,7 @@ exports.up = function (knex) {
     table.string("destination_name").notNullable();
     table.string("location").notNullable();
     table.string("facilities").notNullable();
+    table.string("type").notNullable();
     table.string("describe").notNullable();
     table.text("explained").notNullable();
     table.string("img_src").notNullable();

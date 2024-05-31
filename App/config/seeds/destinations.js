@@ -11,6 +11,7 @@ exports.seed = async function (knex) {
       location: "Lakarinta, Kec.Lohia,Kab.Muna, Sulawesi Tenggara",
       facilities:
         "Area Parkir, musholah, Warung makan & minum, perahu, Tempat istirahat",
+      type: "Air",
       describe: "Pantai Indah dengan warna laut yang biru memanjakan mata",
       explained:
         "Berlokasi tak jauh dari ibukota Muna, pantai yang menyejukkan mata ini begitu menarik untuk dikunjungi dan dikatakan tak pernah sepi pengunjung. Sejak sampai di lokasi wisata, pengunjung akan disuguhkan dengan bebatuan karst cadas yang terlihat mempesona. Agar semakin menarik, pihak pengelola juga menambahkan spot khusus untuk berswafoto dengan background pemandangan pantai yang menakjubkan. Jika pada umumnya wisatawan akan mengunjungi bibir pantai, disini pengunjung juga bisa  menikmati pemandangan sekitar dari ketinggian. Spot satu ini dianggap sebagai surganya mendapatkan hasil jepretan terbaik, saat mengunjungi pantai cantik satu ini. Bahkan pihak pengelola menambahkan dengan sederet fasilitas khusus bagi para pengunjung, agar semakin betah berlama lama di lokasi wisata indah ini.",
@@ -21,6 +22,7 @@ exports.seed = async function (knex) {
       destination_name: "Tanjung Labora",
       location: "Lamorende, Kec. Tongkuno, Kab.Muna, Sultra",
       facilities: "Area Parkir",
+      type: "Air",
       describe:
         "Pantai dengan Keindahan bawah yang tak kalah dengan pantai lain",
       explained:
@@ -32,6 +34,7 @@ exports.seed = async function (knex) {
       destination_name: "Danau Ubur-Ubur Lohia",
       location: "Lohia, Kec.Lohia,Kab.Muna,Sulawesi Tenggara",
       facilities: "...",
+      type: "Air",
       describe:
         "Danau Ubur-ubur yang tersembunyi telah di temukan disalah satu wilayah muna",
       explained:
@@ -44,6 +47,7 @@ exports.seed = async function (knex) {
       location:
         "Jl.Kawasan Puncak, Masalili,Kec.Kontunaga,Kab.Muna,Sulawesi Tenggara",
       facilities: "Area parkir, Warung makan, spot foto",
+      type: "Darat",
       describe:
         "Mau Menikmati keindahan puncak dengan menyebrangi tangga yang terhubung antara dua tebing, yuk ke lakude",
       explained:
@@ -55,6 +59,7 @@ exports.seed = async function (knex) {
       destination_name: "Gua Liangkabori",
       location: "Kotano Wuna, Kec.Tongkuno,Kab.Muna,Sultra",
       facilities: "Area Parkir",
+      type: "Darat",
       describe:
         "Gua yang menjadi saksi bisu sejarah perkembangan masyarakat Muna, yang suka wisata sejarah, disini recomen banget sih.",
       explained:
@@ -66,6 +71,7 @@ exports.seed = async function (knex) {
       destination_name: "Penangkaran Kura-kura Raksasa",
       location: "Lakarinta, Kec.Lohia,Kab.Muna, Sulawesi Tenggara",
       facilities: "Area Parkir",
+      type: "Darat",
       describe: "oke guys,dimuna juga bisa lihat kura-kura raksasa nih",
       explained:
         "Tak hanya tawarkan pemandangan alamnya semata, namun disini pengunjung juga bisa berinteraksi langsung dengan para kura kura yang memiliki ukuran raksasa. Lokasi wisata ini juga terletak di deretan pulau pulau kecil dengan pemandangan indah, sehingga tidak heran bila banyak wisatawan tertarik mengunjunginya. Tak hanya bisa melihat puluhan kura kura berukuran jumbo, disini pengunjung juga bisa melihat aneka ikan ikanan yang menambah daya tariknya. Puluhan kura kura ini berasal dari pantai Meleura, yang ditangkap oleh para nelayan secara tidak sengaja saat menebarkan jaring ketika mencari ikan. Hal ini pun terus berlanjut dan semakin lama jumlahnya semakin meningkat, sehingga mereka pun diletakkan di sebuah penangkaran yang kemudian berubah menjadi destinasi wisata favorit masyarakat.  Termasuk objek wisata unik dan tak banyak ditemui, banyak wisatawan yang mengabadikan momen berliburnya tersebut.",
@@ -76,6 +82,7 @@ exports.seed = async function (knex) {
       destination_name: "Puncak Wakila",
       location: "Kondongia, Kec.Lohia,Kab.Muna,Sultra",
       facilities: "Area parkir, Warung makan, spot foto",
+      type: "Darat",
       describe:
         "Ada lagi nih wisata puncak selain puncak lakude namanya puncak wakila,pemandangan dari puncak ini tidak kalah dari puncak lakude, kuy gas kesini",
       explained:
@@ -87,6 +94,7 @@ exports.seed = async function (knex) {
       destination_name: "Danau Moko",
       location: "Oempu, Kec.Tongkuno, kab.Muna,Sultra",
       facilities: "Area Parkir",
+      type: "Air",
       describe:
         "Danau yang sangat Biru dan disitu ada seekor penyu itulah danau moko, penasaran ?, yuk kesana ",
       explained:
@@ -98,6 +106,7 @@ exports.seed = async function (knex) {
       destination_name: "Danau Randano Ghaghe",
       location: "Kotano Wuna, Kec.Tongkuno,Kab.Muna,Sultra",
       facilities: "Area Parkir",
+      type: "Air",
       describe:
         "Danau yang takala indah dengan danau moko, dana ini memiliki nama yang unik yang di artikan telapak kaki, yang unik bukan",
       explained:
@@ -109,6 +118,7 @@ exports.seed = async function (knex) {
       destination_name: "Pantai Pajala",
       location: "Pajala, Kec.Maginti,Kab.Muna,Sultra",
       facilities: "Area parkir,warung makan",
+      type: "Air",
       describe:
         "Pantai yang memiliki pemandangan yang tidak kalah indah dengan pantai lain",
       explained:
@@ -120,6 +130,7 @@ exports.seed = async function (knex) {
       destination_name: "Danau & Pantai Napabale",
       location: "Desa Loghia,Kec.Lohia, Kab.Muna, Sultra",
       facilities: "Area Parkir, perahu, tempat istirahat, warung makan",
+      type: "Air",
       describe:
         "Danau yang memiliki keindahan tersendiri serta danau yang terhubung dengan pantai, jadi teman-teman secara tidak langsung berwisata dua tempat danau dan pantai, kuy gasss",
       explained:
@@ -131,6 +142,7 @@ exports.seed = async function (knex) {
       destination_name: "Pantai Walengkabola",
       location: "Jl.Tanjung, Oempu, Kec.Tongkuno,Kab.Muna,Sultra",
       facilities: "Area parkir, Warung makan, spot foto, Tempat Istirahat",
+      type: "Air",
       describe:
         "Salah satu Pantai indah selanjutnya pantai Walengkabola guys, kesini aja deh, supaya tau keindahan pantainya gimana",
       explained:

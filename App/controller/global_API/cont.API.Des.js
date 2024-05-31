@@ -9,6 +9,7 @@ const api_Destinations = async (req, res) => {
     data: destinations,
   });
 };
+
 const api_DestinationById = async (req, res) => {
   const { id } = req.params;
   const destinations = await repositoryDestination.allDestinations();
@@ -49,6 +50,7 @@ const api_addDestination = async (req, res) => {
     destination_name,
     location,
     facilities,
+    type,
     describe,
     explained,
     img_src,
@@ -67,6 +69,7 @@ const api_addDestination = async (req, res) => {
       destination_name: destination_name,
       location: location,
       facilities: facilities,
+      type: type,
       describe: describe,
       explained: explained,
       img_src: img_src,
@@ -86,6 +89,7 @@ const api_updateDestination = async (req, res) => {
     destination_name,
     location,
     facilities,
+    type,
     describe,
     explained,
     img_src,
@@ -103,6 +107,7 @@ const api_updateDestination = async (req, res) => {
       destination_name: destination_name,
       location: location,
       facilities: facilities,
+      type: type,
       describe: describe,
       explained: explained,
       img_src: img_src,

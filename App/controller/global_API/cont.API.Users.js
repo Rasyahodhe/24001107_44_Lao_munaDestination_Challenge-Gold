@@ -115,22 +115,33 @@ const api_addUser = async (req, res) => {
 // Update User
 const api_updateUser = async (req, res) => {
   const { id } = req.params;
-  const { name, email, phone, username, password, confirm_password } = req.body;
 
-  const data = {
-    name: name,
-    email: email,
-    phone: phone,
-    username: username,
-    password: password,
-    confirm_password: confirm_password,
-  };
-  await repositoryUsers.updateUser(data, +id);
   const users = await repositoryUsers.users();
-  return res.json({
-    message: "Data Bserhasil diupdate",
-    data: users,
+  const getId = users.find((u) => {
+    return u.user_id === +id;
   });
+  if (!getId) {
+    res.json({
+      message: `Data User Id ${id} Tidak Ada`,
+    });
+  } else {
+    const { name, email, phone, username, password, confirm_password } =
+      req.body;
+    const data = {
+      name: name,
+      email: email,
+      phone: phone,
+      username: username,
+      password: password,
+      confirm_password: confirm_password,
+    };
+    await repositoryUsers.updateUser(data, +id);
+    const users = await repositoryUsers.users();
+    return res.json({
+      message: `Data Id ${id} Berhasil diupdate`,
+      data: users,
+    });
+  }
 };
 
 // ================== DELETE

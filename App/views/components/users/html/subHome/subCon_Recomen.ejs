@@ -1,5 +1,5 @@
 
-    <article class="article_Container">
+    <article class="article_Container">   
       <div class="recomdes_container">
         <div class="recomdes_head">
           <h1>Rekomendasi <b>Destinasi</b></h1>
@@ -12,17 +12,17 @@
               alt="Ini Foto Destinasi"
             ></img>
             <div class="recomdes_Item_Tittle">
-              <h1>Nama Destinasi</h1>
+              <h1><%=destination.destination_name%></h1>
               <p class="recomdes_Item_Explain">
-                Destinasi Ini berada di salah satu lokasi yang terdapat di
-                sultra
+                <%=destination.describe%>
               </p>
               <div class="recomdes_Item_btn">
-                <a href="/us/des/detail" class="btn btn-warning"><i class="bi bi-info-circle-fill"></i> Detail</a>
+                <a href="/:name/des/detail/<%=destination.destination_id  %>" class="btn btn-warning"><i class="bi bi-info-circle-fill"></i> Detail</a>
               </div>
             </div>
           </li>
         </ul>
+        
       </div>
       <div class="galery_play">
         <div class="galery_auto_play">
