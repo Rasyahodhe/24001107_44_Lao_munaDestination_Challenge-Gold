@@ -2,12 +2,13 @@
   <% destination.forEach(des => { %>
   <div class="det_cont">
     <figure>
-      <img src="/../../asset/logo/logo.png" alt="foto_wisata" />
+      <img src="<%=des.img_src  %>" alt="foto_wisata" />
     </figure>
     <figcaption>
-      <h5><%=des.destination_name %></h5>
+      <h1><%=des.destination_name %></h1>
+      <hr />
       <p><i class="bi bi-geo-alt"></i> <%=des.location %></p>
-      <p><%=des.facilities %></p>
+      <p><i class="bi bi-buildings"></i> <%=des.facilities %></p>
     </figcaption>
   </div>
   <div class="det_explain">

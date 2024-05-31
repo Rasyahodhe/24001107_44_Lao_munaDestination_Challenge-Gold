@@ -1,37 +1,70 @@
 // From DATABASE
 const repositoryDestination = require("../../repository/repository.destinations");
 
-// FROM JSON
-const repositoryDestinationJSON = require("../../repository/repo_Global/repo.g.destinations");
 //===================================================== This From Database;
 const api_Destinations = async (req, res) => {
   const destinations = await repositoryDestination.allDestinations();
   return res.json({
+    message: "Berhasil Mengambil Semua Data Destinasi",
     data: destinations,
   });
 };
 const api_DestinationById = async (req, res) => {
   const { id } = req.params;
+  const destinations = await repositoryDestination.allDestinations();
   const destination = await repositoryDestination.getDestinationByid(id);
-  return res.json({
-    data: destination,
+  const getIdDes = destinations.find((d) => {
+    return d.destination_id === +id;
   });
+  if (!getIdDes) {
+    return res.json({
+      message: `Data Id Destinasi ${id} Tidak Ada Dalam Database`,
+    });
+  } else {
+    return res.json({
+      message: `Data Id Destinasi : ${id} Berhasil Di Dapatkan`,
+      data: destination,
+    });
+  }
 };
-// Setting Autentikasi
+
+const api_DestinationByName = async (req, res) => {
+  const { name } = req.params;
+  const destination = await repositoryDestination.getDestinationByname(name);
+  const getdes = destination.length;
+  if (getdes === 0) {
+    return res.json({
+      message: `Data Nama Destinasi : ${name} tidak ada dalam database`,
+    });
+  } else {
+    return res.json({
+      message: `Data Nama Destinasi : ${name} Berhasil didapatkan`,
+      data: destination,
+    });
+  }
+};
+
 const api_addDestination = async (req, res) => {
-  const { name, location, facilities, describe, explained, img_src } = req.body;
+  const {
+    destination_name,
+    location,
+    facilities,
+    describe,
+    explained,
+    img_src,
+  } = req.body;
   // Mengecek apakah data destinasi telah ada
   const destinations = await repositoryDestination.allDestinations();
-  const getNameDestinations = destinations.find((d) => {
-    return d.destination_name === name;
+  const getNameDestination = destinations.find((d) => {
+    return d.destination_name === destination_name;
   });
-  if (getNameDestinations) {
+  if (getNameDestination) {
     return res.json({
       message: "Data Ini Telah ada",
     });
   } else {
     const data = {
-      destination_name: name,
+      destination_name: destination_name,
       location: location,
       facilities: facilities,
       describe: describe,
@@ -41,6 +74,7 @@ const api_addDestination = async (req, res) => {
     await repositoryDestination.addDestination(data);
     const destinations = await repositoryDestination.allDestinations();
     return res.json({
+      message: "Data Baru Destinasi Berhasil Di Tambahkan",
       data: destinations,
     });
   }
@@ -48,45 +82,6 @@ const api_addDestination = async (req, res) => {
 // setting Autentikasi
 const api_updateDestination = async (req, res) => {
   const { id } = req.params;
-  const { name, location, facilities, describe, explained, img_src } = req.body;
-  const data = {
-    destination_name: name,
-    location: location,
-    facilities: facilities,
-    describe: describe,
-    explained: explained,
-    img_src: img_src,
-  };
-  await repositoryDestination.updateDestination(data, id);
-  const destinations = await repositoryDestination.allDestinations();
-  res.json({
-    data: destinations,
-  });
-};
-const api_delDestination = async (req, res) => {
-  const { id } = req.params;
-  await repositoryDestination.deleteDestination(id);
-  const destinaions = await repositoryDestination.allDestinations();
-  res.json({
-    message: "Deleting Data Succes",
-    data: destinaions,
-  });
-};
-
-// ======================================================= This From JSON
-
-const api_Destinations2 = (req, res) => {
-  const destinations = repositoryDestinationJSON.loadDestinations();
-  res.json(destinations);
-};
-
-const api_DestinationById2 = (req, res) => {
-  const { id } = req.params;
-  const destination = repositoryDestinationJSON.findDataById(+id);
-  res.json(destination);
-};
-
-const api_addDestination2 = (req, res) => {
   const {
     destination_name,
     location,
@@ -95,19 +90,16 @@ const api_addDestination2 = (req, res) => {
     explained,
     img_src,
   } = req.body;
-  const destinations = repositoryDestinationJSON.loadDestinations();
-  const lengthdes = destinations.length;
-  const nameDes = destinations.find((d) => {
-    return d.destination_name === name;
+  const destinations = await repositoryDestination.allDestinations();
+  const getId = destinations.find((d) => {
+    return d.destination_id === +id;
   });
-
-  if (nameDes) {
+  if (!getId) {
     return res.json({
-      message: "data Telah ada",
+      message: `Data Id Destination ${id} Tidak Ada Dalam Database`,
     });
   } else {
     const data = {
-      id: lengthdes + 1,
       destination_name: destination_name,
       location: location,
       facilities: facilities,
@@ -115,56 +107,39 @@ const api_addDestination2 = (req, res) => {
       explained: explained,
       img_src: img_src,
     };
-    repositoryDestinationJSON.addData(data);
-    const destinations = repositoryDestinationJSON.loadDestinations();
+    await repositoryDestination.updateDestination(data, +id);
+    const destinations = await repositoryDestination.allDestinations();
     return res.json({
       data: destinations,
     });
   }
 };
 
-// PR UPDATE DATA BEUM SELESAI
-const api_updateDestination2 = (req, res) => {
-  const {
-    destination_name,
-    location,
-    facilities,
-    describe,
-    explained,
-    img_src,
-  } = req.body;
-  const data = {
-    destination_name: destination_name,
-    location: location,
-    facilities: facilities,
-    describe: describe,
-    explained: explained,
-    img_src: img_src,
-  };
-  repositoryDestinationJSON.updateData(data);
-  const destinaions = repositoryDestinationJSON.loadDestinations();
-  res.json({
-    data: destinaions,
+const api_delDestination = async (req, res) => {
+  const { id } = req.params;
+  const destinaions = await repositoryDestination.allDestinations();
+  const getId = destinaions.find((d) => {
+    return d.destination_id === +id;
   });
+  if (!getId) {
+    res.json({
+      message: `Data Id Destination : ${id} Tidak Ada Di Dalam Database`,
+    });
+  } else {
+    await repositoryDestination.deleteDestination(+id);
+    const destinaions = await repositoryDestination.allDestinations();
+    res.json({
+      message: "Deleting Data Succes",
+      data: destinaions,
+    });
+  }
 };
 
-const api_delDestination2 = (req, res) => {
-  const { id } = req.params;
-  repositoryDestinationJSON.delData(+id);
-  const destinaions = repositoryDestinationJSON.loadDestinations();
-  res.json({
-    data: destinaions,
-  });
-};
 module.exports = {
   api_Destinations,
   api_DestinationById,
+  api_DestinationByName,
   api_addDestination,
   api_updateDestination,
   api_delDestination,
-  api_Destinations2,
-  api_DestinationById2,
-  api_addDestination2,
-  api_updateDestination2,
-  api_delDestination2,
 };

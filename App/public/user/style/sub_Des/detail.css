@@ -17,6 +17,12 @@ article .det_cont figcaption {
   flex-direction: column;
   justify-content: center;
 }
+article .det_cont figcaption hr {
+  width: 400px;
+}
+article .det_cont figcaption p:nth-child(4) {
+  font-size: 12px;
+}
 
 /* Bagian Explain */
 article .det_explain {

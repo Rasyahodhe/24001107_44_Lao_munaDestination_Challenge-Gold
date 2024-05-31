@@ -71,6 +71,51 @@ const us_profile = async (req, res) => {
   });
 };
 
+const us_profileUpdate = async (req, res) => {
+  const { name } = req.params;
+  const user = await usersRepository.getuserByusername(name);
+  res.render("./components/users/all_Comp.ejs", {
+    title: "From Update",
+    layout: "./layouts/main_Lay_Client.ejs",
+    menu: "./html/com_formUpdateUser.ejs",
+    name: name,
+    user,
+  });
+};
+
+const us_proccesUpdate = async (req, res) => {
+  const { id } = req.params;
+  const {
+    nameuser,
+    usernameuser,
+    phoneuser,
+    emailuser,
+    passuser,
+    confirmpass,
+  } = req.body;
+
+  const data = {
+    name: nameuser,
+    email: emailuser,
+    phone: phoneuser,
+    username: usernameuser,
+    password: passuser,
+    confirm_password: confirmpass,
+  };
+  await usersRepository.updateUser(data, id);
+  return res.json({
+    message: "Data Berhasil di update kembali ke Login",
+  });
+};
+
+const us_delUser = async (req, res) => {
+  const { name } = req.params;
+  await usersRepository.delUserByUsername(name);
+  res.json({
+    message: "Data Berhasil dihapus",
+  });
+};
+
 module.exports = {
   us_Dash,
   us_Des,
@@ -78,4 +123,7 @@ module.exports = {
   us_About,
   us_Des_Search,
   us_profile,
+  us_profileUpdate,
+  us_proccesUpdate,
+  us_delUser,
 };

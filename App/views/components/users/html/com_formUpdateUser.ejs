@@ -1,0 +1,123 @@
+<% user.forEach(u => { %>
+<section>
+  <div class="frUpdate_cont">
+    <h1>Form Update User</h1>
+    <form id="frmupdate">
+      <div class="mb-2">
+        <label for="nameUser" class="form-label">Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="nameUser"
+          name="nameUser"
+          placeholder="Ras...."
+          required
+          value="<%=u.name%>"
+        />
+      </div>
+      <div class="mb-2">
+        <label for="emailUser" class="form-label">Email</label>
+        <input
+          type="text"
+          class="form-control"
+          id="emailUser"
+          name="emailUser"
+          placeholder="@Example Ras.....@gmail.com"
+          required
+          value="<%=u.email  %>"
+        />
+      </div>
+      <div class="mb-2">
+        <label for="phoneUser" class="form-label">Phone</label>
+        <input
+          type="text"
+          class="form-control"
+          id="phoneUser"
+          name="phoneUser"
+          placeholder="085201199817"
+          required
+          value="<%=u.phone  %>"
+        />
+      </div>
+      <div class="mb-2">
+        <label for="usernameUser" class="form-label">Username</label>
+        <input
+          type="text"
+          class="form-control"
+          id="usernameUser"
+          name="usernameUser"
+          placeholder="ras...."
+          required
+          value="<%=u.username  %>"
+        />
+      </div>
+      <div class="mb-2">
+        <label for="passUser" class="form-label">Password</label>
+        <input
+          type="text"
+          class="form-control"
+          name="passUser"
+          placeholder="........"
+          id="passUser"
+          required
+          value="<%=u.password  %>"
+        />
+      </div>
+      <div class="mb-2">
+        <label for="confirmPass" class="form-label">Confirm Password</label>
+        <input
+          type="text"
+          class="form-control"
+          name="confirmPass"
+          placeholder="......"
+          id="confirmPass"
+          required
+          value="<%=u.confirm_password  %>"
+        />
+      </div>
+
+      <button id="btn_update" type="submit" class="btn btn-outline-dark">
+        Update
+      </button>
+    </form>
+  </div>
+</section>
+<script>
+  const formupdate = document.getElementById("frmupdate");
+  formupdate.addEventListener("submit", async function () {
+    const nameuser = document.getElementById("nameUser").value;
+    const emailuser = document.getElementById("emailUser").value;
+    const phoneuser = document.getElementById("phoneUser").value;
+    const usernameuser = document.getElementById("usernameUser").value;
+    const passuser = document.getElementById("passUser").value;
+    const confirmpass = document.getElementById("confirmPass").value;
+    const data = {
+      nameuser,
+      emailuser,
+      phoneuser,
+      usernameuser,
+      passuser,
+      confirmpass,
+    };
+    const res = await fetch(
+      "http://localhost:3300/<%=u.username%>/<%=u.user_id%>/frmupdateuser/",
+      {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      }
+    ).then(async (res) => {
+      const info = await res.json();
+      alert(`${info.message}`);
+      window.location = "/";
+    });
+  });
+
+  const btn_back = document.querySelector("#btn_update");
+  btn_back.addEventListener("click", () => {
+    window.location = "/";
+  });
+</script>
+<% }) %>

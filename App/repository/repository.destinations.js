@@ -12,10 +12,6 @@ const getDestinationByid = async (id) => {
   return destinastion;
 };
 const getDestinationByname = async (namedes) => {
-  // const destinastion = await db("destinations")
-  //   .select("*")
-  //   .where({ destination_name: namedes });
-
   const destinastion = await db("destinations")
     .select("*")
     .whereLike("destination_name", `%${namedes}%`);
@@ -29,7 +25,7 @@ const addDestination = async (data) => {
 
 const updateDestination = async (data, id) => {
   const destination = await db("destinations")
-    .where({ destination_id: id })
+    .where({ destination_id: +id })
     .update(data, ["*"]);
   return destination;
 };

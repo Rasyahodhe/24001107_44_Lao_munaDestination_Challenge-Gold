@@ -1,6 +1,6 @@
+<% user.forEach(u => { %>
 <div class="profile_cont">
   <div class="user_profile">
-    <% user.forEach(u => { %>
     <div class="user_image">
       <img
         src="https://raw.githubusercontent.com/Rasyahodhe/24001107_44_Lao_munaDestination_Challenge-Gold/main/photo/profile/user.png"
@@ -18,6 +18,31 @@
     <hr />
     <p><b>Password</b> : <%=u.password%></p>
     <hr />
-    <% }) %>
+    <div class="btn_profile">
+      <a
+        href="/<%=u.username%>/<%=u.user_id%>/frmupdateuser/"
+        class="btn btn-warning"
+        ><i class="bi bi-pencil"></i> Update</a
+      >
+      <button id="btn" class="btn btn-danger">
+        <i class="bi bi-trash3"></i> Delete
+      </button>
+    </div>
   </div>
 </div>
+<script>
+  const btn = document.querySelector("#btn");
+  btn.addEventListener("click", async () => {
+    const res = await fetch("http://localhost:3300/<%=u.username %>/del", {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }).then(async (res) => {
+      const info = await res.json();
+      alert(info.message);
+      window.location = "/";
+    });
+  });
+</script>
+<% }) %>

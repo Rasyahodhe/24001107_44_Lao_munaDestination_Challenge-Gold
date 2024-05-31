@@ -1,16 +1,26 @@
+/* Bagian Boostrap */
+@import "./style/boostrap/boostrap.css";
+
+/* Bagian Home */
 @import "./style/sub_Home/all.Style.Home.css";
 
+/* Bagian Navbar */
 @import "./style/navbar.css";
 
 /* bagian Destination */
 @import "./style/sub_Des/all.Style.Des.css";
-@import "./style/boostrap/boostrap.css";
 
 /*  Bagian About */
 @import "./style/about.css";
 
+/* bagian Footer */
 @import "./style/footer.css";
+
+/* Bagian Profile */
 @import "./style/profile.css";
+
+/* bagian Form update */
+@import "./style/formUpdate.css";
 
 .space {
   height: 80px;

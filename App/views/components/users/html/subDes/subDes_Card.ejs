@@ -2,14 +2,17 @@
   <ul class="card_List">
     <% destinations.forEach(des => { %>
     <li class="card_List_Item">
-      <img src="/../asset/logo/logo.png" alt="Gambar Pemandangan" />
-      <div class="card_L_I_Head">
-        <h1><%= des.destination_name%></h1>
-        <p>Wisata Ini Terdapat pada</p>
+      <div class="card_img_head">
+        <img src="<%=des.img_src %>" alt="Gambar Pemandangan" />
+      </div>
+
+      <div class="card_L_I_head">
+        <h2><%= des.destination_name%></h2>
+        <p><%=des.describe %></p>
         <div class="card_L_I_btn">
           <a
             href="/<%=name %>/des/detail/<%=des.destination_id%>"
-            class="btn btn-success"
+            class="btn btn-warning"
           >
             <i class="bi bi-info-circle"></i> Detail</a
           >
