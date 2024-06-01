@@ -41,6 +41,7 @@
   width: 20vw;
   height: 20vw;
   position: absolute;
+  object-fit: cover;
 }
 .card_Container .card_List .card_List_Item .card_L_I_head {
   width: 70%;
@@ -63,5 +64,9 @@
   }
   .card_Container .card_List .card_List_Item {
     width: 100%;
+  }
+  .card_Container .card_List .card_List_Item .card_img_head img {
+    width: 100%;
+    height: 30vh;
   }
 }

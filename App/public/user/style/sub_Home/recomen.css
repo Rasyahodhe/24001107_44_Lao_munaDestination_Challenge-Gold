@@ -46,6 +46,8 @@
 }
 .article_Container .recomdes_container .recomdes .recomdes_item img {
   width: 53.5vw;
+  height: 30vh;
+  object-fit: cover;
   border-radius: 0px 0px 30px 30px;
   -webkit-border-radius: 0px 0px 30px 30px;
   -moz-border-radius: 0px 0px 30px 30px;
@@ -168,7 +170,7 @@
   }
 
   .article_Container .recomdes_container .recomdes .recomdes_item img {
-    width: 88vw;
+    width: 100%;
   }
   /* Setting Recomendation Destination item */
   .article_Container

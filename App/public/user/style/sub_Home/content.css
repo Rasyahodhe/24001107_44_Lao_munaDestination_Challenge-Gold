@@ -2,6 +2,11 @@
 .content_cont {
   width: 100%;
   padding-right: 20px;
+  transition: 1s all;
+  -webkit-transition: 1s all;
+  -moz-transition: 1s all;
+  -ms-transition: 1s all;
+  -o-transition: 1s all;
 }
 
 /* Setting Conttennt head */
@@ -179,5 +184,15 @@
     .list_content
     .list_content_tittle {
     height: 20vh;
+  }
+  .content_cont
+    .content_item_cont
+    .content_item
+    ul
+    .list_content
+    .list_content_tittle
+    img {
+    height: 20vh;
+    object-fit: cover;
   }
 }

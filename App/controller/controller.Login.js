@@ -24,9 +24,14 @@ const getData_Login = async (req, res) => {
       inforeg: "",
     });
   } else {
+    const destinations = await destinationRepository.allDestinations();
+    const recomended = Math.random().toFixed(1) * 10;
+    const getIdRandom = destinations.length - recomended;
+    const destination = destinations[getIdRandom];
+
     const desAir = await destinationRepository.getDestinationByType("Air");
     const desDarat = await destinationRepository.getDestinationByType("Darat");
-    
+
     getUser.forEach((user) => {
       if (username === user.username && password === user.password) {
         return res.render("./components/users/all_Comp.ejs", {
@@ -37,6 +42,7 @@ const getData_Login = async (req, res) => {
           user,
           desAir,
           desDarat,
+          destination,
         });
       }
     });

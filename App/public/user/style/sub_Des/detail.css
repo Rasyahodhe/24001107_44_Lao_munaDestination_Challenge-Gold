@@ -17,6 +17,10 @@ article .det_cont figcaption {
   flex-direction: column;
   justify-content: center;
 }
+article .det_cont figcaption h1 {
+  color: orange;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+}
 article .det_cont figcaption hr {
   width: 400px;
 }
@@ -43,18 +47,40 @@ article .det_explain .exp p {
 
 @media (max-width: 800px) {
   article .det_cont {
+    flex-direction: column;
     align-items: center;
     justify-content: center;
   }
-  article .det_explain {
-    flex-direction: column;
-    gap: 2vh;
-    align-items: center;
+  article .det_cont figure {
+    width: 100%;
+    border-radius: 0px 0px 60px 60px;
+    -webkit-border-radius: 0px 0px 60px 60px;
+    -moz-border-radius: 0px 0px 60px 60px;
+    -ms-border-radius: 0px 0px 60px 60px;
+    -o-border-radius: 0px 0px 60px 60px;
+    overflow: hidden;
+  }
+  article .det_cont figure img {
+    width: 100%;
+    height: 30vh;
+    object-fit: cover;
+  }
+  article .det_cont figcaption hr {
+    width: 0px;
+  }
+  article .det_cont figcaption {
+    width: 100%;
+    text-align: center;
   }
   article .det_explain {
     width: 100%;
+    flex-direction: column;
+    gap: 2vh;
+    align-items: center;
+    padding: 0px;
   }
+
   article .det_explain div {
-    width: 70%;
+    width: 90%;
   }
 }
