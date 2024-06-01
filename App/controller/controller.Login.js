@@ -3,7 +3,7 @@ const destinationRepository = require("../repository/repository.destinations");
 // Untuk menampilkan form login
 const page_Login = (req, res) => {
   res.render("./components/login.ejs", {
-    title: "Login Admin",
+    title: "Login",
     layout: "./layouts/main_login.ejs",
     info: "",
     inforeg: "",
@@ -18,7 +18,7 @@ const getData_Login = async (req, res) => {
   const findPass = users.find((u) => u.password === password);
   if (!findUser || !findPass) {
     res.render("./components/login.ejs", {
-      title: "Login Admin",
+      title: "Login",
       layout: "./layouts/main_login.ejs",
       info: "Username Atau Password Tidak Benar",
       inforeg: "",
