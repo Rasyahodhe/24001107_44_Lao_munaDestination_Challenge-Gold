@@ -82,7 +82,3 @@ Lengkapi Depenciesnya ya :
         "pg": "^8.11.5" // pasti udah ada
 
 setelah Dependeciesnya lengkap. kita coba jalankan websitenya dengan mengetik code kedalam terminal sperti ini `npm start`.
-
-```
-
-```
