@@ -35,10 +35,12 @@ kenapa point 3 dan 5 codenya diulang ?, saya sempat hanya menginstall di luar fo
 ### Cara Migrate :
 
 (1.) Membuat Tabel
+
 Setelah teman-teman mengonfigurasi knexfile.js nya teman-teman sekarang buka terminal lagi, lalu ketik code `knex migrate:latest`.
 Otomatis tabel users dan destinations akan terbuat.
 
 (2.) Menghapus Tabel
+
 Disini teman-teman saya menganjurkan jika ingin menghapus salah satu tabel maka teman-teman hanya tinggal menggunakan code
 `knex migrate:down 'nama_file_migratenya'`.
 
