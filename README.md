@@ -84,3 +84,7 @@ Lengkapi Depenciesnya ya :
         "pg": "^8.11.5" // pasti udah ada
 
 setelah Dependeciesnya lengkap. kita coba jalankan websitenya dengan mengetik code kedalam terminal sperti ini `npm start`.
+
+## Tutorial Video
+
+https://drive.google.com/drive/folders/1TeKmFPudE-ECkFbhQ27c4XX3XRATrOa1?usp=sharing
