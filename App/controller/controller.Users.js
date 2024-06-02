@@ -155,7 +155,7 @@ const us_proccesUpdate = async (req, res) => {
     password: passuser,
     confirm_password: confirmpass,
   };
-  await usersRepository.updateUser(data, id);
+  await usersRepository.updateUser(data, +id);
   return res.json({
     message: "Data Berhasil di update kembali ke Login",
   });
