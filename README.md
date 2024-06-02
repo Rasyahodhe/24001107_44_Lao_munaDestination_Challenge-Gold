@@ -4,9 +4,11 @@
 
 ## Hal Yang Dilakukan Pertama kali
 
-Sebelum menjalankan Website hal-hal yang di persiapkan :
+Sebelum menjalankan Website ini hal-hal yang di persiapkan :
+
 -> Install Postgres SQL
--> Install VSC
+
+-> Install VSC (Visual Studio Code)
 
 Cara menjalankan webesite ini :
 
