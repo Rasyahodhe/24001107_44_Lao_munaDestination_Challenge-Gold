@@ -46,9 +46,9 @@ Disini teman-teman saya menganjurkan jika ingin menghapus salah satu tabel maka 
 
 Contoh : `knex migrate:down 20240517072240_destinations.js`
 
-### cara Seed :
+### Cara Seed :
 
-Disini Teman-teman saya tidak dianjurkan langsung menggunakan code `knex seed:run` tapi step by step, Karena jika teman-teman menggunakan code `knex seed:run` data memang otomatis terisi di kedua tabel tersebut namun id tabel user dan destination akan berlanjut.
+Disini Teman-teman saya tidak menganjurkan langsung menggunakan code `knex seed:run` tapi step by step, Karena jika teman-teman menggunakan code `knex seed:run` data memang otomatis terisi di kedua tabel tersebut namun id tabel user dan destination akan berlanjut.
 
 contoh data users ada 5 data dan data destinasi ada 10 :
 
