@@ -61,6 +61,7 @@ jadi saya sarankan untuk menggunakan code
 Contoh :
 
 `knex seed:run --specific=users.js` // mengisi data pada tabel users.
+
 `knex seed:run --specific=destinations.js` //mengisi data pada tabel destinations
 
 jadi dengan step by step data Id di kedua tabel akan normal.
