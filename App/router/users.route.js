@@ -20,7 +20,7 @@ route_u.get("/:name/about/", us_About);
 route_u.get("/:name/des/detail/:id", us_Des_detail);
 route_u.get("/:name/profile", us_profile);
 route_u
-  .get("/:name/:id/frmupdateuser/", us_profileUpdate)
+  .get("/:name/:id/frmupdateuser", us_profileUpdate)
   .put("/:name/:id/frmupdateuser/", us_proccesUpdate)
   .delete("/:name/del", us_delUser);
 
