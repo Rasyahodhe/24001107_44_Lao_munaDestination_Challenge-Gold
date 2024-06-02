@@ -69,8 +69,19 @@ jadi dengan step by step data Id di kedua tabel akan normal.
 ## Menjalankan Website
 
 Setelah mengkonfigurasi di Folder Config, maka kembalilah ke folder APP dengan mengetik code `cd ..`, perintah kode ini agar kita kembali ke folder APP.
+Lengkapi Depenciesnya ya :
 
-setelah itu ketik kedalam terminal `npm start`.
+        "bootstrap": "^5.3.3",
+        "ejs": "^3.1.9",
+        "express": "^4.18.3", // pasti udah ada
+        "express-ejs-layouts": "^2.5.1",
+        "express-validator": "^7.0.1",
+        "file-system": "^2.2.2",
+        "knex": "^3.1.0", // pasti udah ada
+        "nodemon": "^3.1.0",
+        "pg": "^8.11.5" // pasti udah ada
+
+setelah Dependeciesnya lengkap. kita coba jalankan websitenya dengan mengetik code kedalam terminal sperti ini `npm start`.
 
 ```
 
